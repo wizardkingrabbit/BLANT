@@ -43,7 +43,6 @@ def convert_graph_int(file):
 
 def build_graph(file):
     count = 0
-    print ("new builder is running")
     g = Graph()
     for line in open(file):
         n1, n2 = line.split()
@@ -66,7 +65,7 @@ def build_graph(file):
     for line in open(file):
         n1, n2 = line.split()
         c_graph_pointer = libCalc.GraphConnect(c_graph_pointer, g.indexes[n1], g.indexes[n2])
-    return g
+    return g, c_graph_pointer
 
 """
 
